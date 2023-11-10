@@ -19,6 +19,7 @@ const albert_sans = Albert_Sans({ subsets: ['latin'] })
 export default function RootLayout({ children }) {
 
   const pathname = usePathname()
+  
     
   return (
     <html lang="en">
@@ -26,13 +27,13 @@ export default function RootLayout({ children }) {
       
       <ThemeContextProvider>
       
-      <div className={`flex ${pathname !== '/login' ? 'py-4 pr-4' : 'p-0'}`}>
+      <div className={`flex ${pathname !== '/login' ? 'p-4' : 'p-0'}`}>
       <div className=''>
-      {pathname !== '/login' && <Sidebar/>}
+      {pathname !== '/login' && <Sidebar />}
       </div>
       {/* <div>other</div> */}
       
-    <div className={`w-full ${pathname !== '/login' ? 'pl-4' : 'pl-0'}`}>
+    <div className={`w-full ${pathname !== '/login' ? '' : 'pl-0'}`}>
         {children}
     </div>
       

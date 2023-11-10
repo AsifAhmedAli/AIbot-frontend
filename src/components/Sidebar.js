@@ -14,15 +14,14 @@ import { useThemeContext } from '../app/Context/theme'
 const Sidebar = () => {
 
   const pathname = usePathname()
+  const { isOpen, setIsOpen} = useThemeContext();
   // Create a custom class for the background gradient
 const active = 'bg-gradient-to-r from-[#E1E5FF] to-[#FFE6F4] rounded-[10px] py-[10px] px-[16px]';
 
  
-  const { isOpen, setIsOpen} = useThemeContext();
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+const toggleSidebar = () => {
+  setIsOpen(!isOpen);
+};
   useEffect(() => {
     // Check the screen size and close the sidebar by default for medium screens
     const mediaQuery = window.matchMedia('(max-width: 768px)');
@@ -45,9 +44,9 @@ const active = 'bg-gradient-to-r from-[#E1E5FF] to-[#FFE6F4] rounded-[10px] py-[
     <>
 
  
-    <div className={`bg-white min-h-[950px] h-screen ${isOpen ? "w-[294px] translate-x-0" : "-translate-x-full w-0"} h-[950px] py-[48px] rounded-xl flex flex-col justify-between items-center duration-300 `} >
+    <div className={`bg-white min-h-[950px] h-screen ${isOpen ? "w-[294px] translate-x-0 mr-4" : "-translate-x-full w-0"} h-[950px] py-[48px] rounded-xl flex flex-col justify-between items-center duration-300 `} >
       <div className=''>
-      <button onClick={toggleSidebar} className={`w-[48px] h-[48px] rounded-full bg-white p-3 relative ${isOpen ? "left-52": "left-3"} ml-12 bottom-12`}>
+      <button onClick={toggleSidebar} className={`w-[48px] h-[48px] rounded-full bg-white p-3 relative ${isOpen ? "left-52": "left-0"} ml-12 bottom-12`}>
     {isOpen ? (
       <Image src="/burger.svg" width={24} height={24} alt="Close" />
     ) : (

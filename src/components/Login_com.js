@@ -5,7 +5,7 @@ const Login_com = () => {
   return (
     <>
       <div
-        className="w-full h-screen bg-cover bg-no-repeat login-bg"
+        className="w-full h-[982px] bg-cover bg-no-repeat login-bg"
         style={{
           backgroundImage: `url("/login-bg.svg")`,
         }}
