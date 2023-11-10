@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Header_com from './Header_com';
+import Image from 'next/image';
 
 const Setting_com = () => {
   const [activeTab, setActiveTab] = useState('profile');
@@ -41,9 +42,9 @@ const Setting_com = () => {
           </div>
           <div className="">
             {activeTab === 'profile' ? (
-              <div className='flex my-5'>
-              <div className='w-[200px] mr-8 h-[200px] rounded-xl bg-[#E3E5E8] flex justify-center items-center'>
-                <img src="/profile.svg" alt="profile img" className='w-[200px] h-[200px' />
+              <div className='md:flex my-5 '>
+              <div className='w-full h-full md:w-[200px] md:h-[200px] mb-2 md:mb-0 mr-8  rounded-xl bg-[#E3E5E8] flex justify-center items-center'>
+                <Image src="/profile.svg" width={200} height={200} alt="profile img" className='w-[200px] h-[200px' />
               </div>
                 
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

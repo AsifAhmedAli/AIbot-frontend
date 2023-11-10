@@ -19,18 +19,21 @@ const Bots_com = () => {
   return (
 
     <>
-    <div className="flex justify-between">
-  <h1 className="text-[#0A0D26] ml-16 text-[28px] font-bold leading-8 pt-2">AI Bots</h1>
+    
+    <div className="flex flex-col md:flex-row justify-between">
+  <h1 className="text-[#0A0D26] ml-16 sm:text-[20px] md:text-[28px] font-bold leading-8 pt-2">AI Bots</h1>
 
-       <div className='flex justify-end gap-8'>
+       <div className='flex justify-between md:justify-end mt-5 md:mt-0 gap-8'>
        {/* <Button text="New Bot" onClick={openModal} /> */}
-       <button className="bg-[#151F6D] text-white rounded-xl py-[14px] px-[32px] text-[17px] leading-5 font-normal" onClick={openModal}>
+       <button className="bg-[#151F6D] text-white rounded-xl  py-[7px] md:py-[14px] px-[16px] md:px-[32px] text-[12px] md:text-[17px] leading-1 font-normal" onClick={openModal}>
           New Bot
         </button>
         <Header_com/>
        </div>
 </div>
-<div className="bg-white  h-auto rounded-xl p-6 mt-5">
+<div className="bg-white h-auto rounded-xl p-6  mt-5">
+      <div className='overflow-x-auto'>
+
       <table className="min-w-full">
         <thead>
           <tr>
@@ -47,18 +50,20 @@ const Bots_com = () => {
             <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 text-start">in-bounded</td>
             <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 text-start">123 456 789</td>
             <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 text-start">Lorem ipsum</td>
-            <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 flex justify-center items-center"><Image src="/edit.svg" width={24} height={24} alt="Close" /></td>
+            <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 flex justify-center items-center"><Image src="/edit.svg" width={24} height={24} alt="Close" onClick={openModal} /></td>
           </tr>
           <tr>
             <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 text-start">Bot 2</td>
             <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 text-start">Out-bounded</td>
             <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 text-start">123 456 789</td>
             <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 text-start">Lorem ipsum</td>
-            <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 flex justify-center items-center"><Image src="/edit.svg" width={24} height={24} alt="Close" /></td>
+            <td className="text-[#0A0D26] text-[16px] font-normal leading-5 w-[224px] p-3 flex justify-center items-center"><Image src="/edit.svg" width={24} height={24} alt="Close" onClick={openModal} /></td>
           </tr>
          
         </tbody>
       </table>
+
+      </div>
     </div>
     
         
@@ -66,7 +71,7 @@ const Bots_com = () => {
         {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-gray-700 opacity-75"></div>
-          <div className="relative bg-white w-full md:w-[500px] rounded-xl p-4">
+          <div className="relative bg-white w-[95%] md:w-[500px] rounded-xl p-4">
           <h1 className='text-[#424D5B] text-[20px] leading-6 font-semibold mb-5'>New Bot / Edit Bot</h1>
             <button
               className="absolute top-4 right-4 text-[#0A0D26] text-xl cursor-pointer"

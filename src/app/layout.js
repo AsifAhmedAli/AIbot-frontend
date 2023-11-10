@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       
       <ThemeContextProvider>
       
-      <div className={`flex ${pathname !== '/login' ? 'p-4' : 'p-0'}`}>
+      <div className={`flex ${pathname !== '/login' ? 'py-4 pr-4' : 'p-0'}`}>
       <div className=''>
       {pathname !== '/login' && <Sidebar/>}
       </div>

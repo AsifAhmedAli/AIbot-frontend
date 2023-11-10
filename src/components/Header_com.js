@@ -8,7 +8,7 @@ const Header_com = () => {
     <>
       <div className='flex gap-8'>
        <div className='flex justify-center items-center gap-4'>
-       <h1 className='text-[#0A0D26] text-[17px] leading-5 font-medium'>hello, (User)</h1>
+       <h1 className='text-[#0A0D26] text-[17px] leading-5 font-medium hidden md:block'>hello, (User)</h1>
         <Image src="/profile.svg" width={50} height={50} alt="Link 1" className='' />
        </div>
       </div>
